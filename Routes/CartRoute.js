@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const CartModel = require("../models/cartSchema"); // Adjust the path as necessary
+const CartModel = require("../models/CartModel"); // Adjust the path as necessary
 
 // GET all cart items
 router.get("/", async (req, res) => {
