@@ -4,6 +4,8 @@ const productSchema = new mongoose.Schema({
   name: String,
   price: Number,
   image: String,
+  category: String,
   quantity: Number,
+  description: String,
 });
-module.exports = mongoose.model("products", productSchema); // Use "foodproducts" as the model name
+module.exports = mongoose.model("cfgproducts", productSchema); // Use "foodproducts" as the model name
