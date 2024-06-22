@@ -1,0 +1,15 @@
+.about-us-container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .about-us-card {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 960px) {
+    .about-us-card {
+      flex-direction: column;
+    }
+  }
+  
