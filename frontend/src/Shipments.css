@@ -1,0 +1,40 @@
+/* Shipments.css */
+.tracked-product {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.tracked-product h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.tracked-product p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.shipment-events {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.shipment-events li {
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.shipment-events .out-for-delivery {
+    color: #28a745; /* Green color for out for delivery status */
+    font-weight: bold;
+}
+
+.shipment-events .arrived-at-facility {
+    color: #007bff; /* Blue color for arrived at facility status */
+    font-weight: bold;
+}
