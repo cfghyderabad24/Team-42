@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { Outlet } from 'react-router-dom'
+import ChatbotComponent from '../ChatbotComponent'
 
 function Rootlayout() {
   return (
@@ -11,6 +12,7 @@ function Rootlayout() {
         <Outlet/>
         </div>
         <Footer/>
+        <ChatbotComponent />
     </div>
   )
 }
