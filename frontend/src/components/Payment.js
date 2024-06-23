@@ -1,9 +1,6 @@
-// PaymentPage.js
-
 import React, { useState } from 'react';
-import '../App.css';
 
-const PaymentPage = () => {
+const Payment = () => {
     const [formDetails, setFormDetails] = useState({
         name: '',
         email: '',
@@ -51,6 +48,9 @@ const PaymentPage = () => {
 
                 if (backendResult.success) {
                     alert('Order created successfully. Order ID: ' + backendResult.order_id);
+
+                    // Store orderId in localStorage
+                    localStorage.setItem('orderId', backendResult.order_id);
                 } else {
                     alert('Failed to create order. Please try again.');
                 }
@@ -92,4 +92,4 @@ const PaymentPage = () => {
     );
 };
 
-export default PaymentPage;
+export default Payment;
