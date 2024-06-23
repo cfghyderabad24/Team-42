@@ -1,37 +1,38 @@
-const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const UserSchema = new mongoose.Schema({
-  fname: {
+ fname: {
     type: String,
-    required: true,
+    required: true
   },
-  lname: {
-    type: String,
-    required: true,
+  lname:{
+    type:String,
+    required:true
   },
-  contact: {
-    type: Number,
-    required: true,
+  contact:{
+    type:Number,
+    required:true
   },
   email: {
     type: String,
     required: true,
-    unique: true,
+    unique: true
   },
   password: {
     type: String,
-    required: true,
+    required: true
   },
   role: {
     type: String,
-    default: "user",
-  },
+    default: 'user'
+  }
+  
 });
 
 // Hash password before saving the user
-UserSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) {
+UserSchema.pre('save', async function(next) {
+  if (!this.isModified('password')) {
     return next();
   }
   try {
@@ -44,8 +45,8 @@ UserSchema.pre("save", async function (next) {
 });
 
 // Method to compare passwords
-UserSchema.methods.comparePassword = function (candidatePassword) {
+UserSchema.methods.comparePassword = function(candidatePassword) {
   return bcrypt.compare(candidatePassword, this.password);
 };
 
-module.exports = mongoose.model("cfgusers", UserSchema);
+module.exports = mongoose.model('cfgusers', UserSchema);
