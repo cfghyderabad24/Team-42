@@ -1,0 +1,33 @@
+.tracking-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .tracking-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .status-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    position: relative;
+  }
+  
+  .status-dot.active {
+    background-color: green;
+  }
+  
+  .status-line {
+    width: 50px;
+    height: 4px;
+    background-color: gray;
+  }
+  
+  .status-line.active {
+    background-color: green;
+  }
